@@ -1,9 +1,10 @@
 import React from "react";
-import { Header } from "semantic-ui-react";
+import { Router, Route } from "react-router-dom";
+import { Header, Button } from "semantic-ui-react";
 
 export const Navigation = () => {
   return (
-    <div>
+    <div className={"nav"}>
       <Header size="huge">Pintereach</Header>
     </div>
   );
