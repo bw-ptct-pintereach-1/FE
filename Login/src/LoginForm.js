@@ -85,7 +85,7 @@ export default function LoginForm() {
 
     return (
         <FormContainer>
-            <H1>Pintreach</H1>
+            <H1>Pintereach</H1>
             <form onSubmit={formSubmit}>
                 <Name>Name
                 <input
