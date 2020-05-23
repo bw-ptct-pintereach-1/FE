@@ -7,6 +7,13 @@
   background-color: red;
 } */
 
+.button {
+  background-color: red;
+}
+.title {
+  text-align: left;
+}
+
 /* Article List Component CSS */
 .article-div {
   margin-top: 100px;
