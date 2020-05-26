@@ -28,6 +28,11 @@ font-size: 2em;
 padding: 10px;
 font-family: 'Montserrat', sans-serif;`
 
+const Email = styled.label`
+font-size: 2em;
+padding: 10px;
+font-family: 'Montserrat', sans-serif;`
+
 const H1 = styled.h1`
 font-size:3em;
 font-family: 'Lobster', cursive;
@@ -37,18 +42,22 @@ color: palevioletred;
 
 const formSchemaLogin = yup.object().shape({
     name: yup.string().required("Name is required"),
-    password: yup.string().required("Password is required")
+    password: yup.string().required("Password is required"),
+    email: yup.string().required("Email is required")
 })
 
 export default function LoginForm() {
     const [formState, setFormState] = useState({
         name: "",
-        password: ""
+        password: "",
+        email: ""
     });
 
     const [errorState, setErrorState] = useState({
         name: "",
-        password: ""
+        password: "",
+        email: ""
+
     });
 
     const validate = e => {
@@ -114,7 +123,20 @@ export default function LoginForm() {
                     {errorState.password.length > 0 ? (
                         <p className='error'>{errorState.password}</p>) : null}
                 </Password>
-                <Button>Login</Button>
+
+                <Email>Email
+                <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                        value={formState.email}
+                        onChange={inputChange}
+                    />
+                    {errorState.email.length > 0 ? (
+                        <p className='error'>{errorState.email}</p>) : null}
+                </Email>
+                <Button>Sign Up</Button>
 
             </form>
         </FormContainer>
