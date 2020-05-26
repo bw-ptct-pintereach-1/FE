@@ -2,15 +2,18 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
+import Registration from "./components/Registration";
 import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="App">
-      {/* Login + Registration Components */}
-      {/* Home will be the protected Route */}
-      <Home />
-    </div>
+    <Router>
+      <div className="App">
+        <Route exact path="/" component={Registration} />
+
+        {/* <PrivateRoute exact path="/protected" component={Home} /> */}
+      </div>
+    </Router>
   );
 }
 
