@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { axiosWithAuth } from "../util/axiosWithAuth";
+import axios from "axios";
 
 const Registration = (props) => {
   const [registrationState, setRegistrationState] = useState({
@@ -17,11 +17,16 @@ const Registration = (props) => {
 
   const open = (e) => {
     e.preventDefault();
-    axiosWithAuth()
-      .post("/auth/registration", registrationState)
+    axios
+      .post(
+        "https://pintreach1.herokuapp.com/auth/registration",
+        registrationState
+      )
       .then((res) => {
-        localStorage.setItem("token", res.data.payload);
-        props.history.push("/protected");
+        // Put in the login component
+        // localStorage.setItem("token", res.data.payload);
+
+        props.history.push("/login");
       })
       .catch((err) => {
         console.log("Err is:", err);
@@ -30,7 +35,7 @@ const Registration = (props) => {
 
   return (
     <>
-      <h1>Welcome to Pintereach</h1>
+      <h1>Register to Pintereach</h1>
       <div>
         <form onSubmit={open}>
           <input
