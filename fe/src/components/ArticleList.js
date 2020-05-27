@@ -1,42 +1,19 @@
 import React from "react";
-import { Grid, Image } from "semantic-ui-react";
+
+import { connect } from "react-redux";
 import Article from "./Article";
 
-export const ArticleList = () => {
+export const ArticleList = (props) => {
   return (
     <div className={"article-div"}>
-      <Grid columns={4} divided>
-        <Grid.Row>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-          <Grid.Column>
-            <Article />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      {props.articles.map((article) => (
+        <h1>{article.title}</h1>
+      ))}
     </div>
   );
 };
-export default ArticleList;
+
+const mapStateToProps = (state) => ({
+  articles: state.articles,
+});
+export default connect(mapStateToProps, {})(ArticleList);
