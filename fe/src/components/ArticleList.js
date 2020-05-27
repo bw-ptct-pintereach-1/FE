@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
 import Article from "./Article";
@@ -7,7 +8,9 @@ export const ArticleList = (props) => {
   return (
     <div className={"article-div"}>
       {props.articles.map((article) => (
-        <h1>{article.title}</h1>
+        <Link key={article.id} to={`/articles/${article.id}`}>
+          <Article article={article} />
+        </Link>
       ))}
     </div>
   );

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { getArticles } from "../actions/index.js";
 import Navigation from "./Navigation";
 import ArticlesList from "./ArticleList";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Article from "./Article";
 
 // SavedArticles initial state will be an empty array.
 
@@ -21,6 +22,11 @@ export const Home = (props) => {
       <div>
         <Navigation />
         <ArticlesList />
+
+        <Route
+          path="/articles/:id"
+          render={(props) => <Article {...props} getArticles={getArticles} />}
+        ></Route>
       </div>
     </Router>
   );
