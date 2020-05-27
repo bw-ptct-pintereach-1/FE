@@ -18,14 +18,8 @@ const Registration = (props) => {
   const open = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://pintreach1.herokuapp.com/auth/registration",
-        registrationState
-      )
+      .post("https://pintreach1.herokuapp.com/auth/register", registrationState)
       .then((res) => {
-        // Put in the login component
-        // localStorage.setItem("token", res.data.payload);
-
         props.history.push("/login");
       })
       .catch((err) => {
@@ -59,7 +53,7 @@ const Registration = (props) => {
             value={registrationState.password}
             onChange={handleChange}
           />
-          <button>Log In</button>
+          <button>Send</button>
         </form>
       </div>
     </>
