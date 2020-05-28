@@ -1,12 +1,12 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Header, Button } from "semantic-ui-react";
 
 export const Navigation = () => {
   return (
     <div className={"nav"}>
       <Header size="huge">Pintereach</Header>
-      <Button>Saved List</Button>
+      <NavLink to="/add"> Add Article </NavLink>
     </div>
   );
 };

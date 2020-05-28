@@ -12,6 +12,7 @@ export const ArticleList = ({
   getArticles,
 }) => {
   console.log(currentUser);
+
   const deleteArticles = (article) => {
     deleteArticle(article);
     getArticles();
@@ -21,7 +22,10 @@ export const ArticleList = ({
     <div className={"article-div"}>
       {articles.map((article) => (
         <div>
-          <Article title={article.title} />
+          <Article
+            title={article.title}
+            category_name={article.category_name}
+          />
 
           <Link key={article.id} to={`/articles/${article.id}`}>
             <button>More Info</button>
