@@ -19,3 +19,19 @@ export const getArticles = () => (dispatch) => {
       console.log("The error is", err);
     });
 };
+
+export const deleteArticle = (article) => (dispatch) => {
+  axiosWithAuth()
+    .delete(`articles/${article.id}`)
+    .then((res) => {
+      dispatch({ DELETING_ARTICLE, payload: article });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+// export const updateArticle = (title, content, category) => (dispatch) => {
+//   dispatch({ type: EDITING_ARTICLE });
+//   axiosWithAuth().post();
+// };

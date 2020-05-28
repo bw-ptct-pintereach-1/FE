@@ -5,15 +5,22 @@ import "./App.css";
 import Registration from "./components/Registration";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import ArticleInfo from "./components/ArticleInfo";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Route exact path="/" component={Registration} />
-        <Route exact path="/login" component={Login} />
+        <Switch>
+          <Route exact path="/" component={Registration} />
+          <Route exact path="/login" component={Login} />
 
-        <Route exact path="/protected" component={Home} />
+          <Route exact path="/articles" component={Home} />
+          <Route
+            path="/articles/:id"
+            render={(props) => <ArticleInfo {...props} />}
+          />
+        </Switch>
       </div>
     </Router>
   );

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../util/axiosWithAuth";
 
+import { setCurrentUser } from "../actions/index";
+
 const Login = (props) => {
   const [logState, setLogState] = useState({
     username: "",
@@ -18,9 +20,11 @@ const Login = (props) => {
       .then((res) => {
         console.log("res", res);
         localStorage.setItem("token", res.data.token);
+        localStorage.setItem("currentUser", res.data.user_id);
+
         console.log("Token", res.data.payload);
 
-        props.history.push("/protected");
+        props.history.push("/articles");
       })
       .catch((err) => {
         console.log("Err is:", err);

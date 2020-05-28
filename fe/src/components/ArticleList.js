@@ -3,14 +3,37 @@ import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
 import Article from "./Article";
+import { deleteArticle, getArticles } from "../actions/index";
 
-export const ArticleList = (props) => {
+export const ArticleList = ({
+  articles,
+  currentUser,
+  deleteArticle,
+  getArticles,
+}) => {
+  console.log(currentUser);
+  const deleteArticles = (article) => {
+    deleteArticle(article);
+    getArticles();
+  };
+
   return (
     <div className={"article-div"}>
-      {props.articles.map((article) => (
-        <Link key={article.id} to={`/articles/${article.id}`}>
-          <Article article={article} />
-        </Link>
+      {articles.map((article) => (
+        <div>
+          <Article title={article.title} />
+
+          <Link key={article.id} to={`/articles/${article.id}`}>
+            <button>More Info</button>
+          </Link>
+          <button
+            onClick={() => {
+              deleteArticles(article);
+            }}
+          >
+            Delete
+          </button>
+        </div>
       ))}
     </div>
   );
@@ -18,5 +41,8 @@ export const ArticleList = (props) => {
 
 const mapStateToProps = (state) => ({
   articles: state.articles,
+  currentUser: state.currentUser,
 });
-export default connect(mapStateToProps, {})(ArticleList);
+export default connect(mapStateToProps, { deleteArticle, getArticles })(
+  ArticleList
+);

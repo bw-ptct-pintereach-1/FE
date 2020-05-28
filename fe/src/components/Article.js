@@ -1,8 +1,7 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 
-export const Article = (props) => {
-  const { title } = props.article;
+export const Article = ({ title }) => {
   return (
     <div>
       <Card>
