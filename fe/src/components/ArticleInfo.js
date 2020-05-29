@@ -8,11 +8,14 @@ export const ArticleInfo = (props) => {
   );
   console.log("ID Test", id);
 
+  const pic = faker.image.animals();
+  console.log(pic);
+
   return (
     <div className="article-title">
       <h1>{id.title}</h1>
-      <p>{id.content}</p>
-      {/* <img src={faker.imageUrl} /> */}
+      <img src={pic} />
+      <h2>{id.content}</h2>
 
       <button
         onClick={() => {
