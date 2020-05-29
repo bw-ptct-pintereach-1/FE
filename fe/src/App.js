@@ -29,7 +29,8 @@ function App() {
           />
 
           <Route
-            path="/update"
+            exact
+            path="/update/:id"
             render={(props) => <UpdateArticleForm {...props} />}
           />
         </Switch>

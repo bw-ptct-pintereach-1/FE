@@ -2,11 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Header, Button } from "semantic-ui-react";
 
-export const Navigation = () => {
+export const Navigation = (props) => {
   return (
     <div className={"nav"}>
-      <Header size="huge">Pintereach</Header>
-      <NavLink to="/add"> Add Article </NavLink>
+      <h1>Pintereach</h1>
+      <div className={"nav-button"}>
+        <NavLink to="/add"> Add Article </NavLink>
+      </div>
     </div>
   );
 };

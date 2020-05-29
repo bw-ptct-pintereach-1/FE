@@ -5,10 +5,12 @@ export const ArticleInfo = (props) => {
   const id = props.articles.find(
     (article) => `${article.id}` === props.match.params.id
   );
+  console.log("ID Test", id);
 
   return (
-    <div>
+    <div className="article-title">
       <h1>{id.title}</h1>
+      {/* <p>{id.content}</p> */}
 
       <button
         onClick={() => {

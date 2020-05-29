@@ -36,7 +36,7 @@ export const addArticle = (user_id, article) => (dispatch) => {
     .post(`/articles/${user_id}`, article)
     .then((res) => {
       console.log("RES", res);
-      dispatch({ ADDING_ARTICLE, payload: article });
+      dispatch({ type: ADDING_ARTICLE, payload: article });
     })
     .catch((err) => {
       console.log(err);
@@ -44,11 +44,14 @@ export const addArticle = (user_id, article) => (dispatch) => {
 };
 
 export const editArticle = (user_id, article) => (dispatch) => {
+  console.log("updating article test", article);
   axiosWithAuth()
     .put(`/articles/${article.id}/user/${user_id}`, article)
     .then((res) => {
-      dispatch({ UPDATING_ARTICLE, payload: article });
+      console.log("Updating Res", res);
+      dispatch({ type: UPDATING_ARTICLE, payload: article });
     })
+
     .catch((err) => {
       console.log(err);
     });
