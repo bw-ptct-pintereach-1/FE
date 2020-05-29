@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { addArticle } from "../actions/index";
-import { getArticles } from "../actions/index";
+import { addArticle, getArticles } from "../actions/index";
 import { connect } from "react-redux";
 
 export const AddArticleForm = (props) => {
   const user_id = localStorage.getItem("currentUser");
+  console.log("user_id", user_id);
   const [newArticle, setNewArticle] = useState({
     title: "",
     content: "",
-    category: "",
+    category_id: 0,
   });
 
   const handleSubmit = (e) => {
@@ -26,26 +26,27 @@ export const AddArticleForm = (props) => {
 
   return (
     <div className="form">
+      <h1>Add Your Own Articles</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Title"
           name="title"
-          value={props.title}
+          value={newArticle.title}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Content"
           name="content"
-          value={props.content}
+          value={newArticle.content}
           onChange={handleChange}
         />
         <input
           type="text"
           placeholder="Category"
-          name="category"
-          value={props.category}
+          name="category_id"
+          value={newArticle.category_id}
           onChange={handleChange}
         />
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { axiosWithAuth } from "../util/axiosWithAuth";
+// import { axiosWithAuth } from "../util/axiosWithAuth";
+import axios from "axios";
 
 const Login = (props) => {
   const [logState, setLogState] = useState({
@@ -13,8 +14,8 @@ const Login = (props) => {
 
   const open = (e) => {
     e.preventDefault();
-    axiosWithAuth()
-      .post("/auth/login", logState)
+    axios
+      .post("https://pintreach1.herokuapp.com/auth/login", logState)
       .then((res) => {
         console.log("res", res);
         localStorage.setItem("token", res.data.token);

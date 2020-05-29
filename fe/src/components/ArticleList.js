@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { connect } from "react-redux";
-import Article from "./Article";
+
 import { deleteArticle, getArticles } from "../actions/index";
 
 export const ArticleList = ({
@@ -17,13 +16,11 @@ export const ArticleList = ({
   };
 
   return (
-    <div className={"article-div"}>
+    <div>
       {articles.map((article) => (
-        <div>
-          <Article
-            title={article.title}
-            category_name={article.category_name}
-          />
+        <div className={"article-div"}>
+          <h1>{article.title}</h1>
+          <h3>{article.category_name}</h3>
 
           <Link key={article.id} to={`/articles/${article.id}`}>
             <button>More Info</button>

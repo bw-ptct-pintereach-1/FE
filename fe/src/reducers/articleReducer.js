@@ -2,6 +2,7 @@ import {
   CAUGHT_ARTICLES,
   DELETING_ARTICLE,
   ADDING_ARTICLE,
+  UPDATING_ARTICLE,
 } from "../actions/index";
 
 const initialState = {
@@ -23,6 +24,11 @@ export const articleReducer = (state = initialState, action) => {
         }),
       };
     case ADDING_ARTICLE:
+      return {
+        ...state,
+        articles: [...state.articles, action.payload],
+      };
+    case UPDATING_ARTICLE:
       return {
         ...state,
         articles: [...state.articles, action.payload],

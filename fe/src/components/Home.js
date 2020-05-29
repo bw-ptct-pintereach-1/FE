@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { getArticles } from "../actions/index.js";
 import Navigation from "./Navigation";
 import ArticlesList from "./ArticleList";
-import Article from "./Article";
+
 import ArticleInfo from "./ArticleInfo";
 
 // SavedArticles initial state will be an empty array.
