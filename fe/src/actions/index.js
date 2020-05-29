@@ -1,6 +1,4 @@
-import axios from "axios";
 import { axiosWithAuth } from "../util/axiosWithAuth";
-
 export const FETCHING_ARTICLES = "FETCHING_ARTICLES";
 export const CAUGHT_ARTICLES = "CAUGHT_ARTICLES";
 export const DELETING_ARTICLE = "DELETING_ARTICLE";
