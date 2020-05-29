@@ -17,13 +17,16 @@ export const ArticleList = ({
   };
 
   return (
-    <div className={"article-div"}>
+    <div>
       {articles.map((article) => (
-        <div>
-          <Article
+        <div className={"article-div"}>
+          <h1>{article.title}</h1>
+          <p>{article.category_name}</p>
+
+          {/* <Article
             title={article.title}
             category_name={article.category_name}
-          />
+          /> */}
 
           <Link key={article.id} to={`/articles/${article.id}`}>
             <button>More Info</button>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { addArticle } from "../actions/index";
-import { getArticles } from "../actions/index";
+import { addArticle, getArticles } from "../actions/index";
 import { connect } from "react-redux";
 
 export const AddArticleForm = (props) => {

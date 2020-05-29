@@ -5,7 +5,6 @@ export const ArticleInfo = (props) => {
   const id = props.articles.find(
     (article) => `${article.id}` === props.match.params.id
   );
-  console.log("ID", id);
 
   return (
     <div>
