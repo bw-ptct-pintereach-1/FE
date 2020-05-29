@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import faker from "faker";
 
 export const ArticleInfo = (props) => {
   const id = props.articles.find(
@@ -10,7 +11,8 @@ export const ArticleInfo = (props) => {
   return (
     <div className="article-title">
       <h1>{id.title}</h1>
-      {/* <p>{id.content}</p> */}
+      <p>{id.content}</p>
+      {/* <img src={faker.imageUrl} /> */}
 
       <button
         onClick={() => {
