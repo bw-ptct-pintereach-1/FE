@@ -24,7 +24,7 @@ export const deleteArticle = (article) => (dispatch) => {
   axiosWithAuth()
     .delete(`articles/${article.id}`)
     .then((res) => {
-      dispatch({ DELETING_ARTICLE, payload: article });
+      dispatch({ type: DELETING_ARTICLE, payload: article });
     })
     .catch((err) => {
       console.log(err);
@@ -43,13 +43,13 @@ export const addArticle = (user_id, article) => (dispatch) => {
     });
 };
 
-// export const editArticle = (user_id, article) => (dispatch) => {
-//   axiosWithAuth()
-//     .put(`/articles/${article.id}/user/${user_id}`)
-//     .then((res) => {
-//       dispatch({ UPDATING_ARTICLE, payload: article });
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// };
+export const editArticle = (user_id, article) => (dispatch) => {
+  axiosWithAuth()
+    .put(`/articles/${article.id}/user/${user_id}`, article)
+    .then((res) => {
+      dispatch({ UPDATING_ARTICLE, payload: article });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

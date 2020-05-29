@@ -9,6 +9,7 @@ import Login from "./components/Login";
 
 import ArticleInfo from "./components/ArticleInfo";
 import AddArticleForm from "./components/AddArticleForm";
+import UpdateArticleForm from "./components/UpdateArticleForm";
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
           <Route
             path="/add"
             render={(props) => <AddArticleForm {...props} />}
+          />
+
+          <Route
+            path="/update"
+            render={(props) => <UpdateArticleForm {...props} />}
           />
         </Switch>
       </div>

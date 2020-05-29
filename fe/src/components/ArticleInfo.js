@@ -10,12 +10,19 @@ export const ArticleInfo = (props) => {
   return (
     <div>
       <h1>{id.title}</h1>
+
+      <button
+        onClick={() => {
+          props.history.push(`/update/${id.id}`);
+        }}
+      >
+        Update Article
+      </button>
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
   articles: state.articles,
-  currentUser: state.currentUser,
 });
 export default connect(mapStateToProps, {})(ArticleInfo);
