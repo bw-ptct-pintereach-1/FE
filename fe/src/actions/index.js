@@ -1,4 +1,4 @@
-import { axiosWithAuth } from "../util/axiosWithAuth";
+import { axiosWithAuth } from "../util/axioswithAuth";
 export const FETCHING_ARTICLES = "FETCHING_ARTICLES";
 export const CAUGHT_ARTICLES = "CAUGHT_ARTICLES";
 export const DELETING_ARTICLE = "DELETING_ARTICLE";
