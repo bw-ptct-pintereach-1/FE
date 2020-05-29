@@ -21,6 +21,7 @@ const Registration = (props) => {
       .post("https://pintreach1.herokuapp.com/auth/register", registrationState)
       .then((res) => {
         props.history.push("/login");
+        console.log("Reg Res", res);
       })
       .catch((err) => {
         console.log("Err is:", err);
