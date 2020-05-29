@@ -11,8 +11,6 @@ export const ArticleList = ({
   deleteArticle,
   getArticles,
 }) => {
-  console.log(currentUser);
-
   const deleteArticles = (article) => {
     deleteArticle(article);
     getArticles();

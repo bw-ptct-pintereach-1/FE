@@ -1,8 +1,6 @@
 import axios from "axios";
 import { axiosWithAuth } from "../util/axiosWithAuth";
 
-// import { user_id } from "../components/Login";
-
 export const FETCHING_ARTICLES = "FETCHING_ARTICLES";
 export const CAUGHT_ARTICLES = "CAUGHT_ARTICLES";
 export const DELETING_ARTICLE = "DELETING_ARTICLE";
@@ -37,6 +35,7 @@ export const addArticle = (user_id, article) => (dispatch) => {
   axiosWithAuth()
     .post(`/articles/${user_id}`)
     .then((res) => {
+      console.log("RES", res);
       dispatch({ ADDING_ARTICLE, payload: article });
     })
     .catch((err) => {

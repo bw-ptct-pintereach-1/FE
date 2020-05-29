@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../util/axiosWithAuth";
 
-import { setCurrentUser } from "../actions/index";
-
-// export const user_id = localstorage.getItem("currentUser");
-
 const Login = (props) => {
   const [logState, setLogState] = useState({
     username: "",

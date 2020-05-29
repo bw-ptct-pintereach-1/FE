@@ -22,10 +22,10 @@ function App() {
             path="/articles/:id"
             render={(props) => <ArticleInfo {...props} />}
           />
-          {/* <Route
+          <Route
             path="/add"
             render={(props) => <AddArticleForm {...props} />}
-          /> */}
+          />
         </Switch>
       </div>
     </Router>

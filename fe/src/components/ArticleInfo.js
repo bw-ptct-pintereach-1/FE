@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 
 export const ArticleInfo = (props) => {
-  console.log(props.currentUser);
   const id = props.articles.find(
     (article) => `${article.id}` === props.match.params.id
   );
