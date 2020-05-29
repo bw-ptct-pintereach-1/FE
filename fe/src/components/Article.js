@@ -1,15 +1,16 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Icon, Image, CardDescription } from "semantic-ui-react";
 
-export const Article = (props) => {
-  const { title } = props.article;
+export const Article = ({ title, category_name }) => {
+  console.log("id", category_name);
+
   return (
     <div>
       <Card>
         <Card.Content>
           <Card.Header>{title}</Card.Header>
 
-          <Card.Description>Article text </Card.Description>
+          <CardDescription>{category_name}</CardDescription>
         </Card.Content>
       </Card>
     </div>

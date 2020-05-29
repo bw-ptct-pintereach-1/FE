@@ -6,6 +6,7 @@ import { getArticles } from "../actions/index.js";
 import Navigation from "./Navigation";
 import ArticlesList from "./ArticleList";
 import Article from "./Article";
+import ArticleInfo from "./ArticleInfo";
 
 // SavedArticles initial state will be an empty array.
 
@@ -18,17 +19,10 @@ export const Home = (props) => {
   // axiosWithAuth()//axios.get here that will be passed down using my Articles Context.
 
   return (
-    <Router>
-      <div>
-        <Navigation />
-        <ArticlesList />
-
-        <Route
-          path="/articles/:id"
-          render={(props) => <Article {...props} getArticles={getArticles} />}
-        ></Route>
-      </div>
-    </Router>
+    <div>
+      <Navigation />
+      <ArticlesList />
+    </div>
   );
 };
 
