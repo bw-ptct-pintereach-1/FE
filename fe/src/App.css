@@ -9,6 +9,7 @@
 .nav h1 {
   font-size: 100px;
 }
+
 .nav-button {
   display: flex;
   justify-content: flex-end;
@@ -31,4 +32,8 @@
   border-style: solid;
   border-width: 0.5px;
   background-color: #e6e6e6;
+}
+
+.article-title h1 {
+  font-size: 50px;
 }

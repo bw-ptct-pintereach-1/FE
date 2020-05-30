@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { Button, Typography } from "@material-ui/core";
 
 import { deleteArticle, getArticles } from "../actions/index";
 
@@ -19,19 +20,23 @@ export const ArticleList = ({
     <div>
       {articles.map((article) => (
         <div className={"article-div"}>
-          <h1>{article.title}</h1>
-          <h3>{article.category_name}</h3>
+          <Typography variant="h2">{article.title}</Typography>
+          <Typography variant="h4"> Topic: {article.category_name}</Typography>
 
           <Link key={article.id} to={`/articles/${article.id}`}>
-            <button>More Info</button>
+            <Button varriant="outline" color="primary">
+              More Info
+            </Button>
           </Link>
-          <button
+          <Button
+            varriant="outline"
+            color="primary"
             onClick={() => {
               deleteArticles(article);
             }}
           >
             Delete
-          </button>
+          </Button>
         </div>
       ))}
     </div>
