@@ -2,6 +2,14 @@ import React, { useState } from "react";
 // import { axiosWithAuth } from "../util/axiosWithAuth";
 import axios from "axios";
 
+import styled from "styled-components";
+
+const H1 = styled.h1`
+  font-size: 3em;
+  font-family: "Lobster", cursive;
+  color: palevioletred;
+`;
+
 const Login = (props) => {
   const [logState, setLogState] = useState({
     username: "",
@@ -32,7 +40,7 @@ const Login = (props) => {
 
   return (
     <>
-      <h1>Sign into Pintereach</h1>
+      <H1>Sign into Pintereach</H1>
       <div>
         <form onSubmit={open}>
           <input
