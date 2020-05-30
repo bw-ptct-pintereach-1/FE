@@ -6,8 +6,6 @@ import { getArticles } from "../actions/index.js";
 import Navigation from "./Navigation";
 import ArticlesList from "./ArticleList";
 
-import ArticleInfo from "./ArticleInfo";
-
 // SavedArticles initial state will be an empty array.
 
 export const Home = (props) => {

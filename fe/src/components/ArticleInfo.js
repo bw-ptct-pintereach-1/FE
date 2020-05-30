@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import faker from "faker";
+import { Button, Typography } from "@material-ui/core";
 
 export const ArticleInfo = (props) => {
   const id = props.articles.find(
@@ -13,17 +14,20 @@ export const ArticleInfo = (props) => {
 
   return (
     <div className="article-title">
-      <h1>{id.title}</h1>
+      <Typography variant="h1">{id.title}</Typography>
+      <div className="nav-button">
+        <Button
+          varriant="outline"
+          color="primary"
+          onClick={() => {
+            props.history.push(`/update/${id.id}`);
+          }}
+        >
+          Update Article
+        </Button>
+      </div>
       <img src={pic} />
-      <h2>{id.content}</h2>
-
-      <button
-        onClick={() => {
-          props.history.push(`/update/${id.id}`);
-        }}
-      >
-        Update Article
-      </button>
+      <Typography variant="h4">{id.content}</Typography>
     </div>
   );
 };

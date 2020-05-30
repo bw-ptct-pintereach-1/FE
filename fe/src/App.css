@@ -1,21 +1,20 @@
 .App {
   text-align: center;
 }
+*/
 
 /* Navigation  */
 .nav {
   margin-bottom: 25px;
 }
-.nav h1 {
-  font-size: 100px;
-}
+
 .nav-button {
   display: flex;
   justify-content: flex-end;
   padding: 0 100px;
   transition: 0.2s ease-in;
   margin-bottom: 40px;
-  color: white;
+  color: red;
 }
 
 .button {
@@ -31,4 +30,8 @@
   border-style: solid;
   border-width: 0.5px;
   background-color: #e6e6e6;
+}
+
+.article-title h1 {
+  font-size: 50px;
 }
