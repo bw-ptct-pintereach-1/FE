@@ -1,13 +1,11 @@
 .App {
   text-align: center;
 }
+*/
 
 /* Navigation  */
 .nav {
   margin-bottom: 25px;
-}
-.nav h1 {
-  font-size: 100px;
 }
 
 .nav-button {
@@ -16,7 +14,7 @@
   padding: 0 100px;
   transition: 0.2s ease-in;
   margin-bottom: 40px;
-  color: white;
+  color: red;
 }
 
 .button {

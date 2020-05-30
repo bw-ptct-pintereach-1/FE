@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addArticle, getArticles } from "../actions/index";
 import { connect } from "react-redux";
+import { Button, Typography } from "@material-ui/core";
 
 export const AddArticleForm = (props) => {
   const user_id = localStorage.getItem("currentUser");
@@ -26,7 +27,7 @@ export const AddArticleForm = (props) => {
 
   return (
     <div className="form">
-      <h1>Add Your Own Articles</h1>
+      <Typography variant="h1">Add Your Own Articles</Typography>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
