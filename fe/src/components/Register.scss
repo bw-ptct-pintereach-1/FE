@@ -1,0 +1,36 @@
+
+
+h1{
+    font-size:3rem;
+    color:white;
+    text-shadow: 2px 2px 2px #756C83;
+    letter-spacing: 0rem;
+}
+
+.register-container{
+    background-color: #ef5252;
+    height:100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    form{
+        border: 1px solid black;
+        width:50%;
+        height:30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        input{
+            width:40%;
+            height:5vh;
+        }
+
+        button{
+            width:20%;
+        }
+    }
+}

@@ -5,10 +5,10 @@ import { AppBar, Toolbar, Typography } from "@material-ui/core";
 export const Navigation = (props) => {
   return (
     <div className={"nav"}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="secondary">
         <Typography variant="h1">Pintereach</Typography>
         <div className={"nav-button"}>
-          <NavLink to="/add"> Add Article </NavLink>
+          <NavLink className = "add-text" to="/add"> Add Article </NavLink>
         </div>
       </AppBar>{" "}
     </div>

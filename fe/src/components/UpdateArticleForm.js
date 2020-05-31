@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Nav2 from "./Nav2";
 import { getArticles, editArticle } from "../actions/index";
 import { connect } from "react-redux";
 
@@ -37,9 +37,10 @@ export const UpdateArticleForm = (props) => {
   console.log("updated test", updatedArticle);
 
   return (
-    <div>
-      <h1>Edit your Article</h1>
+    <div className = "register-container">
+      <Nav2/>
       <form onSubmit={handeleSubmit}>
+      <h1>Edit your Article</h1>
         <input
           type="text"
           name="title"

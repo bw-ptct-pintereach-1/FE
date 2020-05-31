@@ -26,12 +26,43 @@
 
 /* Article List Component CSS */
 .article-div {
-  margin: 0px 50px;
+  margin:2%;
   border-style: solid;
   border-width: 0.5px;
   background-color: #e6e6e6;
+  
+}
+
+.article-div:hover{
+  background-color:#ee8572;
 }
 
 .article-title h1 {
   font-size: 50px;
 }
+
+.add-text{
+  font-size:2rem;
+  color:white;
+  font-weight:200;
+  text-shadow: 3px 2px 2px #756C83;
+  margin:1%;
+}
+   .add-text:hover{
+      color:grey;
+      
+      
+      transform: scale(1.1);
+    
+   }
+
+   Button{
+     font-size:1rem !important;
+     color:black !important;
+   }
+
+   Button:hover{
+     color:white !important;
+   }
+
+
