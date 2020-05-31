@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Register.scss";
+import Nav from "./Nav";
 
 const Registration = (props) => {
   const [registrationState, setRegistrationState] = useState({
@@ -30,8 +32,10 @@ const Registration = (props) => {
 
   return (
     <>
-      <h1>Register to Pintereach</h1>
-      <div>
+    <Nav/>
+      
+      <div className = "register-container">
+      <h1>Register New User</h1>
         <form onSubmit={open}>
           <input
             type="text"

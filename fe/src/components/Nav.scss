@@ -1,0 +1,56 @@
+.nav-container{
+    font:inherit;
+    background-color: #B9E1DC;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    .nav-links{
+        width:28%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav2-links{
+        width:25%;
+        display: flex;
+        align-items: center;
+    }
+   
+   
+
+
+    .nav-header{
+        font-size:5rem;
+        text-decoration: none;
+        color: white;
+        text-shadow: 3px 2px 2px #756C83;
+        letter-spacing: 0;
+        vertical-align: baseline;
+        font-weight:700;
+        height:82.6px;
+    }
+
+    a{
+        text-decoration: none;
+        font-size:3rem;
+        color:white;
+        font-weight:200;
+        text-shadow: 3px 2px 2px #756C83;
+        margin:1%;
+
+        &:hover{
+            color:white;
+            text-shadow: 3px 2px 2px #756C83;
+            
+            transform: scale(1.1);
+            margin:2%;
+        }
+    }
+}
+
+button{
+    color:#ef5252 !important;
+    font-size: 2rem !important;
+
+}
+

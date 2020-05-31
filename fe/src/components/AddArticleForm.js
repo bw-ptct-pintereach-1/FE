@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { addArticle, getArticles } from "../actions/index";
 import { connect } from "react-redux";
 import { Button, Typography } from "@material-ui/core";
+import Nav2 from "./Nav2";
 
 export const AddArticleForm = (props) => {
   const user_id = localStorage.getItem("currentUser");
@@ -26,9 +27,11 @@ export const AddArticleForm = (props) => {
   };
 
   return (
-    <div className="form">
-      <Typography variant="h1">Add Your Own Articles</Typography>
+    <div className="register-container">
+      <Nav2/>
+      <Typography variant="h1">Add an Article</Typography>
       <form onSubmit={handleSubmit}>
+      
         <input
           type="text"
           placeholder="Title"

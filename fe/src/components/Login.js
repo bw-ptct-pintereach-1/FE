@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 // import { axiosWithAuth } from "../util/axiosWithAuth";
 import axios from "axios";
+import Nav from "./Nav";
+import "./Register.scss";
 
 import styled from "styled-components";
 
@@ -40,8 +42,10 @@ const Login = (props) => {
 
   return (
     <>
-      <H1>Sign into Pintereach</H1>
-      <div>
+    <Nav/>
+      
+      <div className = "register-container">
+      <h1>Sign into Pintereach</h1>
         <form onSubmit={open}>
           <input
             type="text"

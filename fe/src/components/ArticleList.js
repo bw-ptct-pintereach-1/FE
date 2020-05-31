@@ -19,9 +19,13 @@ export const ArticleList = ({
   return (
     <div>
       {articles.map((article) => (
+        
         <div className={"article-div"}>
+          {console.log("art",article)}
           <Typography variant="h2">{article.title}</Typography>
           <Typography variant="h4"> Topic: {article.category_name}</Typography>
+          <Typography variant="h5"> Written By: {article.author}</Typography>
+          
 
           <Link key={article.id} to={`/articles/${article.id}`}>
             <Button varriant="outline" color="primary">
