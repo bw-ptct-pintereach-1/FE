@@ -11,6 +11,8 @@ export const ArticleList = ({
   deleteArticle,
   getArticles,
 }) => {
+
+  
   const deleteArticles = (article) => {
     deleteArticle(article);
     getArticles();
@@ -42,6 +44,7 @@ export const ArticleList = ({
           >
             Delete
           </Button>
+          
         </div>
       ))}
     </div>

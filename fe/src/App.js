@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import ArticleInfo from "./components/ArticleInfo";
 import AddArticleForm from "./components/AddArticleForm";
 import UpdateArticleForm from "./components/UpdateArticleForm";
+import UserAccount from "./components/UserAccount";
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
             exact
             path="/update/:id"
             render={(props) => <UpdateArticleForm {...props} />}
+          />
+
+          <Route
+            path="/user/:id"
+            render={(props) => <UserAccount {...props} />}
           />
         </Switch>
       </div>
