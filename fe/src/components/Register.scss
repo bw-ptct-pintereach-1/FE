@@ -2,13 +2,13 @@
 
 h1{
     font-size:3rem;
-    color:white;
-    text-shadow: 2px 2px 2px #756C83;
+    color:rgb(53, 180, 202);
+    text-shadow: 2px 5px 2px grey;
     letter-spacing: 0rem;
 }
 
 .register-container{
-    background-color: #ef5252;
+    background-color: rgba(141, 150, 128, 0.205);
     height:100vh;
     display: flex;
     justify-content: flex-start;
@@ -16,7 +16,7 @@ h1{
     flex-direction: column;
 
     form{
-        border: 1px solid black;
+      
         width:50%;
         height:30%;
         display: flex;

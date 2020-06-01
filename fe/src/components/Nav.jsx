@@ -5,7 +5,7 @@ import { NavLink,Link } from "react-router-dom";
 const Nav = () => {
     return (
         <div className = "nav-container">
-            <h1 className = "nav-header">Pintreach</h1>
+            <img  className = "logo"src={require("../cover.png")}  />
                 <div className = "nav-links">
                     <a href = "https://pintereachbrittany.netlify.app/">Home</a>
                     <NavLink to = "/login">Login</NavLink>

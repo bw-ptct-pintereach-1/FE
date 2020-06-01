@@ -9,12 +9,12 @@ export const ArticleInfo = (props) => {
   );
   console.log("ID Test", id);
 
-  const pic = faker.image.animals();
-  console.log(pic);
+ 
 
   return (
     <div className="article-title">
-      <Typography variant="h1">{id.title}</Typography>
+      <Typography variant="h1">{id.title || "Unknown Title"}</Typography>
+      <p>Written by: {id.author || "unknown"}</p>
       <div className="nav-button">
         <Button
           varriant="outline"
@@ -26,8 +26,9 @@ export const ArticleInfo = (props) => {
           Update Article
         </Button>
       </div>
-      <img src={pic} />
-      <Typography variant="h4">{id.content}</Typography>
+      <img src={faker.random.image()} />
+      <br/>
+      <Typography variant="h4">{id.content || faker.lorem.paragraphs()}</Typography>
     </div>
   );
 };

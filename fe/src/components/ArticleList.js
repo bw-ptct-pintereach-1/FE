@@ -25,14 +25,15 @@ export const ArticleList = ({
           <Typography variant="h2">{article.title}</Typography>
           <Typography variant="h4"> Topic: {article.category_name}</Typography>
           <Typography variant="h5"> Written By: {article.author}</Typography>
-          
+           
 
           <Link key={article.id} to={`/articles/${article.id}`}>
-            <Button varriant="outline" color="primary">
+            <Button  className ="buttons-nav" varriant="outline" color="primary">
               More Info
             </Button>
           </Link>
           <Button
+          className ="buttons-nav"
             varriant="outline"
             color="primary"
             onClick={() => {

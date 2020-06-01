@@ -1,6 +1,6 @@
 .nav-container{
     font:inherit;
-    background-color: #B9E1DC;
+    background-color: rgb(53, 180, 202);
     display: flex;
     justify-content: space-between;
     width:100%;
@@ -23,7 +23,7 @@
         font-size:5rem;
         text-decoration: none;
         color: white;
-        text-shadow: 3px 2px 2px #756C83;
+        text-shadow: 1px 2px 2px #756C83 !important;
         letter-spacing: 0;
         vertical-align: baseline;
         font-weight:700;
@@ -49,8 +49,17 @@
 }
 
 button{
-    color:#ef5252 !important;
+    color:rgb(53, 180, 202) !important;
     font-size: 2rem !important;
 
+}
+
+.logo{
+    height:15vh;
+    width:20%;
+}
+
+.icon{
+    font-size:5rem !important;
 }
 
