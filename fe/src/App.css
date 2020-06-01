@@ -6,19 +6,27 @@
 /* Navigation  */
 .nav {
   margin-bottom: 25px;
+
+  
+}
+
+.article-title{
+  background-color: rgba(141, 150, 128, 0.205);
 }
 
 .nav-button {
   display: flex;
   justify-content: flex-end;
-  padding: 0 100px;
+ 
   transition: 0.2s ease-in;
-  margin-bottom: 40px;
-  color: red;
+  position: relative;
+  bottom:80%;
+ 
+  color: rgb(53, 180, 202) !important;
 }
 
 .button {
-  background-color: red;
+  background-color: rgb(53, 180, 202) !important;
 }
 .title {
   text-align: left;
@@ -29,27 +37,26 @@
   margin:2%;
   border-style: solid;
   border-width: 0.5px;
-  background-color: #e6e6e6;
+  background-color: rgba(141, 150, 128, 0.205);
   
 }
 
 .article-div:hover{
-  background-color:#ee8572;
+  background-color:rgba(53, 180, 202, 0.61);
+  transform: scale(1.1);
 }
 
-.article-title h1 {
-  font-size: 50px;
-}
+
 
 .add-text{
   font-size:2rem;
-  color:white;
+  color:rgb(53, 180, 202);
   font-weight:200;
-  text-shadow: 3px 2px 2px #756C83;
+  text-shadow: 1px 1px 2px #756C83;
   margin:1%;
 }
    .add-text:hover{
-      color:grey;
+    color:white;
       
       
       transform: scale(1.1);
@@ -64,5 +71,30 @@
    Button:hover{
      color:white !important;
    }
+
+   .icon{
+   color:#756C83;
+   
+  }
+
+  .app-bar{
+    background-color: rgba(141, 150, 128, 0.205) !important;
+    
+    height:18vh !important;
+  }
+
+  .nav-h1{
+    text-shadow: 3px 2px 2px #756C83;
+    color:rgb(53, 180, 202);
+    text-shadow: 1px 1px 2px #756C83;
+  }
+
+  .buttons-nav{
+    color:rgb(53, 180, 202) !important;
+  }
+
+  h1{
+    text-shadow: 3px 2px 2px white!important;
+  }
 
 
